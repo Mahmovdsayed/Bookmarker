@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="https://routeacademy.github.io/Bookmarker/images/bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.xyz/npm/sweetalert2@11"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class=" py-5">
+    <section class=" py-5">
+        <div class="container">
+            <h1>Bookmarker</h1>
+            <div class="bookmark-body line w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+                <div class=" w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkName" class="pb-2 fw-semibold">
+                      <i class="fa-solid fa-book-bookmark pe-2"></i>
+                      Site Name</label>
+                    <input oninput="validation()" type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName">
+                  </div>
+                  <div class=" w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkURL" class="pb-2 fw-semibold">
+                      <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input oninput="validation()" type="url" placeholder="Website URL" class="form-control" id="bookmarkURL">
+                  </div>
+                  <button class="btn btn-success px-5"  onclick="addData()" id="submitBtn">Submit</button>
+            </div>
+            
+        </div>
+    </section>
+    <section class="mt-4 text-center">
+        <div class="container">
+        <table class=" table bg-light table-border">
+            <thead>
+              <tr><th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr></thead>
+            <tbody id="tableContent" class="">
+                
+            </tbody>
+          </table>
+        </div>
+    </section>
+    
+  </main>
+
+  <script src="./js/app.js"></script>
+
+</body>
+</html>
